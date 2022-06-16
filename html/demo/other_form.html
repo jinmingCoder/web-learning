@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body {
+            background-color: antiquewhite;
+        }
+        
+        h1 {
+            line-height: 1.5em;
+            text-align: center;
+        }
+        
+        form {
+            margin: 0 auto;
+            width: 400px;
+            /* 轮廓 */
+            padding: 1em;
+            border: 1px solid #eee;
+            border-radius: 1em;
+        }
+        
+        label {
+            display: block;
+            /* width: 200px; */
+            text-align: center;
+            height: 60px;
+            font-size: 1rem;
+        }
+        
+        input {
+            display: block;
+            height: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>一些其他的表单组件</h1>
+    <form method="get" action="#">
+        <div>
+            <label for="price">Choose a maximum house price: </label>
+            <input type="range" name="price" id="price" min="50000" max="500000" step="100" value="250000">
+            <output class="price-output" for="price"></output>
+        </div>
+        <div>
+            <label>日期/时间</label>
+            <input type="datetime-local" name="datetime" id="datetime">
+            <input type="month" name="month" id="month">
+            <input type="time" name="time" id="time">
+            <input type="week" name="week" id="week">
+            <label for="myDate">When are you available this summer?</label>
+            <input type="date" name="myDate" min="2013-06-01" max="2013-08-31" step="7" id="myDate">
+        </div>
+        <div>
+            <label>颜色</label>
+            <input type="color" name="color" id="color">
+        </div>
+        <div>
+            <label>描述信息</label>
+            <textarea id="detail" rows="10" cols="30" placeholder="描述信息..." wrap="hard"></textarea>
+        </div>
+        <div>
+            <label>进度条</label>
+            <progress max="100" value="20" step="5">
+            </progress>
+        </div>
+        <div>
+            <label>仪表盘（类型进度条，表示范围）</label>
+            <meter min="0" max="100" value="50" low="20" high="80" optimum="100">
+            </meter>
+        </div>
+    </form>
+</body>
+
+</html>

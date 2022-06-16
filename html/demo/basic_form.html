@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        h1 {
+            line-height: 1.5em;
+            text-align: center;
+        }
+        
+        form {
+            margin: 0 auto;
+            width: 400px;
+            /* 轮廓 */
+            padding: 1em;
+            border: 1px solid #eee;
+            border-radius: 1em;
+        }
+        
+        label {
+            display: inline-block;
+            width: 70px;
+            text-align: right;
+        }
+        
+        input,
+        textarea {
+            font: 1em sans-serif;
+            width: 250px;
+            box-sizing: border-box;
+            border: 1px solid #999;
+        }
+        
+        input:focus,
+        textarea:focus {
+            border-color: #000;
+        }
+        
+        textarea {
+            vertical-align: top;
+            height: 5em;
+        }
+        
+        .div-submit,
+        .div-reset {
+            display: inline-block;
+            width: 100px;
+        }
+        
+        .div-reset {
+            margin-left: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>用户信息收集</h1>
+    <form method="get" action="#" name="form">
+        <!-- action 数据提交的地址 ，method 数据提交的方式 -->
+        <fieldset>
+            <legend>用户信息收集</legend>
+            <!-- fieldset 用于创建具有相同目的或语义的小部件组。 
+            legend 标签是配合fieldset 标签，对其进行描述说明。 -->
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name">
+                <!-- label 的for属性 和 input 的id属性绑定可以让点击lable的时候，
+                关联的input同时获取焦点 -->
+            </div>
+            <div>
+                <label for="iphone">iPhone:<abbr title="required">*</abbr></label>
+                <input type="text" id="iphone" name="user_phone">
+                <!-- 当一个小部件上放置多个标签，也就是在多标签的情况下，
+                您应该将一个小部件和它的标签嵌套在一个<label>元素中。 -->
+            </div>
+            <div>
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" name="user_email" multiple>
+                <!-- name 的作用是作为一个key值传递给服务器 -->
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="user_message"></textarea>
+            </div>
+        </fieldset>
+
+        <div class="div-submit">
+            <!-- <button type="submit">Commit your message</button> -->
+            <input type="submit">
+        </div>
+
+        <div class="div-reset">
+            <!-- <button type="reset">Reset your message</button> -->
+            <input type="reset">
+        </div>
+
+    </form>
+</body>
+
+</html>
